@@ -1,26 +1,21 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <!-- formData格式上传单个文件 -->
+    <UploadSingle />
+    <!-- 以BASE64格式上传文件 -->
+    <UploadBASE64 />
+    <!-- 前端生产Hash名上传文件 -->
+    <UploadHashName />
+  </div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+<script setup>
+import UploadSingle from '@/components/UploadSingle.vue';
+import UploadBASE64 from '@/components/UploadBASE64.vue';
+import UploadHashName from './components/UploadHashName.vue';
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+ <script>
+ export default {
+   name: "App",
+ }
+ </script>
