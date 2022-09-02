@@ -4,7 +4,7 @@
             <Button icon="ios-cloud-upload-outline">Upload file exclude hash name</Button>
         </Upload>
         <Button @click="handlePreview">预览图片</Button>
-        <Modal v-model="previewVisible" v-if="HASH">
+        <Modal v-model="previewVisible" v-if="HASH" title="图片预览">
             <img :src="HASH" alt="">
         </Modal>
     </div>
